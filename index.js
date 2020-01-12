@@ -6,7 +6,7 @@ require('dotenv/config');
 const http = require('http');
 const port = process.env.PORT || 3000;
 http.createServer().listen(port);
-const token = process.env.TOKEN;
+const TOKEN = process.env.TOKEN;
 
 const Discord = require('discord.js');
 const{ prefix, giphyToken } = require('./config.json');
@@ -89,11 +89,6 @@ client.on('message', message => {
                     if(message.guild.connection) message.guild.voiceConnection.disconnect();
                     break;
     }
-})
-
-
-client.once('ready',() => {
-    console.log('Ready!')
 })
 
 //Greeting
@@ -288,8 +283,22 @@ function image(message){
     });
 }
 
-client.login(token);
+client.login(TOKEN);
 
 client.on('error', err => {
     console.log(err);
 });
+
+
+
+exports.handler = async function() {
+    return {
+      headers: {
+        'Access-Control-Allow-Headers': '*',
+        'Access-Control-Allow-Methods': 'OPTIONS,POST',
+        'Access-Control-Allow-Origin': 'http://localhost:8000',
+      },
+      statusCode: 201,
+      body: 'someBody',
+    }
+  };
