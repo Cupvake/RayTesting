@@ -6,7 +6,7 @@ require('dotenv/config');
 const http = require('http');
 const port = process.env.PORT || 3000;
 http.createServer().listen(port);
-const TOKEN = process.env.TOKEN;
+const token = process.env.token;
 
 const Discord = require('discord.js');
 const{ prefix, giphyToken } = require('./config.json');
@@ -283,7 +283,7 @@ function image(message){
     });
 }
 
-client.login(TOKEN);
+client.login(token);
 
 client.on('error', err => {
     console.log(err);
@@ -302,3 +302,8 @@ exports.handler = async function() {
       body: 'someBody',
     }
   };
+
+  
+client.once('ready',() => {
+    console.log('Ready!')
+})
