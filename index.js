@@ -7,7 +7,6 @@ const http = require('http');
 const port = process.env.PORT || 3000;
 http.createServer().listen(port);
 const token = process.env.token;
-
 const Discord = require('discord.js');
 const{ prefix, giphyToken } = require('./config.json');
 const client = new Discord.Client();

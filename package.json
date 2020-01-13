@@ -1,12 +1,11 @@
 {
   "name": "ray",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
-  "author": "",
+  "author": "Entropy",
   "license": "ISC",
   "dependencies": {
     "ascii-table": "0.0.9",
@@ -21,5 +20,16 @@
     "random-puppy": "^1.1.0",
     "request": "^2.88.0",
     "ytdl-core": "^1.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cupvake/RayTesting.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Cupvake/RayTesting/issues"
+  },
+  "homepage": "https://github.com/Cupvake/RayTesting#readme",
+  "description": ""
 }
