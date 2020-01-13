@@ -1,6 +1,6 @@
 const { RichEmbed } = require("discord.js");
 const { stripIndents } = require("common-tags");
-const { promptMessage } = require("../../../../Desktop/Ray testing - RPS/RPS/functions.js");
+const { promptMessage } = require("../../functions.js");
 
 module.exports = {
     name: "kick",

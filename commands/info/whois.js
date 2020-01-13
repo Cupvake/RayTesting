@@ -1,6 +1,6 @@
 const { RichEmbed } = require("discord.js");
 const { stripIndents } = require("common-tags");
-const { getMember, formatDate } = require("../../../../Desktop/Ray testing - RPS/RPS/functions.js");
+const { getMember, formatDate } = require("../../functions.js");
 
 module.exports = {
     name: "whois",
